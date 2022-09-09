@@ -5,7 +5,7 @@ const client = createClient(
   getDefaultClient({
     appName: "Show My Learnings",
     autoConnect: true,
-    infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
+    alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_ID,
     chains: [chain.polygon],
   })
 );
@@ -13,7 +13,7 @@ const client = createClient(
 const Web3Provider = ({ children }) => {
   return (
     <WagmiConfig client={client}>
-      <ConnectKitProvider>{children}</ConnectKitProvider>
+      <ConnectKitProvider mode="dark">{children}</ConnectKitProvider>
     </WagmiConfig>
   );
 };

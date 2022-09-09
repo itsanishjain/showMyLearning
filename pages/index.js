@@ -1,12 +1,14 @@
 import ConnectWallet from "../src/components/ConnectWallet";
+import Main from "../src/components/Main";
 
 export default function Home() {
   return (
     <div>
-      <div className="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+      <div className="bg-slate-900 h-screen w-screen">
         <div className="absolute top-6 right-6">
           <ConnectWallet />
         </div>
+        <Main />
       </div>
     </div>
   );
