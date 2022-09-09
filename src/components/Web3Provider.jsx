@@ -1,9 +1,10 @@
 import { createClient, WagmiConfig, chain } from "wagmi";
 import { ConnectKitProvider, getDefaultClient } from "connectkit";
+import { APP_NAME } from "../lib/consts";
 
 const client = createClient(
   getDefaultClient({
-    appName: "Show My Learnings",
+    appName: APP_NAME,
     autoConnect: true,
     alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_ID,
     chains: [chain.polygon],
